@@ -29,7 +29,30 @@
  ```
 4. Создайте пустой репозиторий на GitHub. Вы можете назвать его так же как ваше приложение.
 5. В файле `vite.config.ts` добавьте строчку ```base: '/имя-репозитория-гитхаб/',```
+  Пример того, как выглядит файл после добавления.
+  ```
+  import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
 
+// https://vitejs.dev/config/
+export default defineConfig({
+	plugins: [react()],
+	server: {
+		open: true,
+	},
+	base: '/vite-deploy/',
+	build: {
+		outDir: 'build',
+		sourcemap: true,
+	},
+	test: {
+		globals: true,
+		environment: 'jsdom',
+		setupFiles: 'src/setupTests',
+		mockReset: true,
+	},
+});
+  ```
 6. Если в вашем проекте используется роутер, замените BrowserRouter на HashRouter:
  ``` javascript
  import { HashRouter } from 'react-router-dom';
