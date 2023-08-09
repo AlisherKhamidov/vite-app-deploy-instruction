@@ -90,7 +90,7 @@ root.render(
 npm run deploy -- -m "Deploy React app to GitHub Pages"
 ```
 
-9.  Настройка GitHub Pages
+9.  Настройка GitHub Pages (этот шаг может сделаться автоматически, тогда просто проверьте, что все так)
 В вашем браузере перейдите в настройки GitHub Pages
 "Settings" --> "Code and automation" --> "Pages" --> "Build and deployment"  
   
